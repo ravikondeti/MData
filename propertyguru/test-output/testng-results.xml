@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[App Title is : ]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="41041" started-at="2016-11-07T16:08:46Z" finished-at="2016-11-07T16:09:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="41041" started-at="2016-11-07T16:08:46Z" finished-at="2016-11-07T16:09:27Z">
+      <class name="com.allproperty.propertyguru.AppiumSampleTest">
+        <test-method status="PASS" signature="initialSetup()[pri:0, instance:com.allproperty.propertyguru.AppiumSampleTest@3c0f93f1]" name="initialSetup" is-config="true" duration-ms="1551" started-at="2016-11-08T00:08:46Z" finished-at="2016-11-08T00:08:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialSetup -->
+        <test-method status="PASS" signature="startApp()[pri:0, instance:com.allproperty.propertyguru.AppiumSampleTest@3c0f93f1]" name="startApp" is-config="true" duration-ms="27705" started-at="2016-11-08T00:08:48Z" finished-at="2016-11-08T00:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApp -->
+        <test-method status="PASS" signature="sampleTest()[pri:0, instance:com.allproperty.propertyguru.AppiumSampleTest@3c0f93f1]" name="sampleTest" duration-ms="10015" started-at="2016-11-08T00:09:15Z" finished-at="2016-11-08T00:09:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[App Title is : ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method status="PASS" signature="closeApplicationAfterTest(org.testng.ITestResult)[pri:0, instance:com.allproperty.propertyguru.AppiumSampleTest@3c0f93f1]" name="closeApplicationAfterTest" is-config="true" duration-ms="1723" started-at="2016-11-08T00:09:25Z" finished-at="2016-11-08T00:09:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sampleTest status=SUCCESS method=AppiumSampleTest.sampleTest()[pri:0, instance:com.allproperty.propertyguru.AppiumSampleTest@3c0f93f1] output=App Title is : ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplicationAfterTest -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.allproperty.propertyguru.AppiumSampleTest@3c0f93f1]" name="closeApp" is-config="true" duration-ms="17" started-at="2016-11-08T00:09:27Z" finished-at="2016-11-08T00:09:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- com.allproperty.propertyguru.AppiumSampleTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

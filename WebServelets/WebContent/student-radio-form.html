@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="CSS-FILES/student-field.css"/>
+</head>
+<body>
+
+<h3>Welcome to radio button in jSP</h3>
+<form action="student-radio-response.jsp">
+<label for="firstname">First Name</label>
+<input type="text" name="firstname" id="firstname"/>
+<br/>
+<br/>
+<label for="lastname">Last Name</label>
+<input type="text" name="lastname" id="lastname"/>
+<br/>
+<br/>
+<fieldset id=radiofield-set>
+<legend> Favorite Language</legend>
+<input type="radio" name="favoritelanguage" value="JAVA"> JAVA 
+<input type="radio" name="favoritelanguage" value="C#" > C#
+<input type="radio" name="favoritelanguage" value="PHP"> PHP
+<input type="radio" name="favoritelanguage" value="PERL"> PERL
+</fieldset>
+
+<br/>
+<br/>
+
+<input type="submit" value="Submit">
+
+
+</form>
+</body>
+</html>

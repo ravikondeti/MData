@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="Triangle" class="org.ravi.spring.Triangle">
+		<!--<property name = "message" value = "Hello World!"/> <constructor-arg 
+			type="int" value="20"/> <constructor-arg type="java.lang.String" value="Equilateral"/> 
+			<constructor-arg index="1" value="20"/> <constructor-arg index="0" value="Equilateral"/> -->
+
+		<!--  <property name="pointA" ref="zeroPoint"/>
+		<property name="pointA">
+		<idref="zeroPoint"/>
+		</property> 
+		
+		<property name="pointB">
+			<bean class="org.ravi.spring.Point">
+				<property name="x" value="-20" />
+				<property name="y" value="0" />
+			</bean>
+		</property>
+		
+		<property name="pointC">
+			<bean class="org.ravi.spring.Point">
+				<property name="x" value="0" />
+				<property name="y" value="20" />
+			</bean>
+		</property>-->
+		
+		<property name="points">
+		<!-- <list>
+		<ref bean="zeroPoint"/>
+		<ref bean="point2"/>
+		<ref bean="point3"/>
+		</list> -->
+		<map>
+		<entry key="zeroPoint" value-ref="zeroPoint"/>
+		<entry key="point2" value-ref="point2"/>
+		<entry key="point3" value-ref="point3"/>
+		</map>
+		</property>
+	</bean>
+
+	<bean id="zeroPoint" class="org.ravi.spring.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="point2" class="org.ravi.spring.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="point3" class="org.ravi.spring.Point">
+		<property name="x" value="0" />
+		<property name="y" value="20" />
+	</bean>
+	<alias name="Triangle" alias="Triangle-alias" />
+	
+	
+	<bean id="ContextTest" class="org.ravi.spring.ContextTest">
+	<property name="contextTestA" ref="ContextTest1"/>
+	<property name="contextTestB" ref="ContextTest2"/>
+	<property name="contextTestC" ref="ContextTest3"/>
+
+	</bean>
+	
+	<bean id="ContextTest1" class="org.ravi.spring.ContextTest">
+	<property name="id" value="1"/>
+	<property name="name" value="ravi"/>
+	</bean>
+	<bean id="ContextTest2" class="org.ravi.spring.ContextTest" parent="ContextTest1">
+	<property name="name" value="sowmya"/>
+	</bean>
+	<bean id="ContextTest3" class="org.ravi.spring.ContextTest">
+	<property name="id" value="1"/>
+	<property name="name" value="manasvi"/>
+	</bean>
+	
+</beans>
+                
