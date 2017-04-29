@@ -1,0 +1,150 @@
+[
+  {
+    "source": "^menu bar should display at homepage$",
+    "steps": [
+      {
+        "name": "menu bar should display at homepage",
+        "aggregatedDurations": {
+          "average": 0.072987477,
+          "median": 0.072987477
+        },
+        "durations": [
+          {
+            "duration": 0.072987477,
+            "location": "LoginTest.feature:31"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Menu bar options should display$",
+    "steps": [
+      {
+        "name": "Menu bar options should display",
+        "aggregatedDurations": {
+          "average": 0.553835862,
+          "median": 0.553835862
+        },
+        "durations": [
+          {
+            "duration": 0.553835862,
+            "location": "LoginTest.feature:36"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Search bar should display$",
+    "steps": [
+      {
+        "name": "Search bar should display",
+        "aggregatedDurations": {
+          "average": 0.060498754,
+          "median": 0.060498754
+        },
+        "durations": [
+          {
+            "duration": 0.060498754,
+            "location": "LoginTest.feature:37"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Brower should land on home page$",
+    "steps": [
+      {
+        "name": "Brower should land on home page",
+        "aggregatedDurations": {
+          "average": 0.017513642,
+          "median": 0.017513642
+        },
+        "durations": [
+          {
+            "duration": 0.017513642,
+            "location": "LoginTest.feature:27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Toolsqa logo should display at homepage$",
+    "steps": [
+      {
+        "name": "Toolsqa logo should display at homepage",
+        "aggregatedDurations": {
+          "average": 0.088629392,
+          "median": 0.088629392
+        },
+        "durations": [
+          {
+            "duration": 0.088629392,
+            "location": "LoginTest.feature:28"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Launch the website store\\.demoqa\\.com$",
+    "steps": [
+      {
+        "name": "Launch the website store.demoqa.com",
+        "aggregatedDurations": {
+          "average": 11.305354393,
+          "median": 11.305354393
+        },
+        "durations": [
+          {
+            "duration": 11.644144932,
+            "location": "LoginTest.feature:26"
+          },
+          {
+            "duration": 10.966563855,
+            "location": "LoginTest.feature:35"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Checkout button should be available at homepage$",
+    "steps": [
+      {
+        "name": "Checkout button should be available at homepage",
+        "aggregatedDurations": {
+          "average": 0.062787939,
+          "median": 0.062787939
+        },
+        "durations": [
+          {
+            "duration": 0.062787939,
+            "location": "LoginTest.feature:29"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^my account option should display at homepage$",
+    "steps": [
+      {
+        "name": "my account option should display at homepage",
+        "aggregatedDurations": {
+          "average": 0.065577564,
+          "median": 0.065577564
+        },
+        "durations": [
+          {
+            "duration": 0.065577564,
+            "location": "LoginTest.feature:30"
+          }
+        ]
+      }
+    ]
+  }
+]

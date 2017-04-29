@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <!--  <meta http-equiv="Refresh" content="0; URL=app/main" />-->
+ <link rel="stylesheet" href="../resourece/css/companyregistration.css"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<title>MData Registration</title>
+
+</head>
+<body>
+	<div id="container" >
+		
+ 		
+			
+			<h1 id="reg_header">Welcome To Company Registration Page</h1>
+		</div>
+		<div id="content"> 
+
+			<div id="div_org_reg">
+				<form>
+					<div id="org_reg1" class="text_type_class">
+						 <table>
+							<tbody>
+								<tr >
+									<td id="org_reg_id_lbl" class="org_reg_cls_lbl">
+										<label for="org_id"> Org Id</label>
+									</td>
+									<td>
+										<input type="text" id="org_id" name="orgId" maxlength="6" size="40"> </input>
+									</td>
+								</tr>
+								<tr>	
+									<td class="org_reg_cls_lbl">
+										<label for="org_name"> Org Name</label>
+									</td>
+									<td>
+										<input type="text" id="org_name" name="orgName" maxlength="35" size="40"> </input>
+									</td>
+								</tr>
+								<tr>	
+									<td class="org_reg_cls_lbl">
+										<label for="org_add1"> Org Address1</label>
+									</td>
+									<td>
+										<input type="text" id="org_add1" name="orgAdd1" maxlength="35" size="40"> </input>
+									</td>
+								</tr>
+								<tr>	
+									<td class="org_reg_cls_lbl">
+										<label for="org_add2"> Org Address2</label>
+									</td>
+									<td>
+										<input type="text" id="org_add2" name="orgAdd2" maxlength="35" size="40"> </input>
+									</td>
+								</tr>
+								<tr>	
+									<td class="org_reg_cls_lbl">
+										<label for="org_ctry"> Org Country</label>
+									</td>
+									<td>
+										<select id="org_ctry" name="orgCtry" >
+											<option >Select</option>
+											<option value="IN">India</option>
+										</select>
+									</td>
+								</tr>
+								<tr >	
+									<td class="org_reg_cls_lbl" colspan="2">
+										<input type="submit" id="org_submit" value="Submit"> </input>
+									</td>
+									
+								</tr>
+			
+							</tbody>
+
+						</table>
+					</div>
+				</form>
+			</div>
+			
+	
+		</div>
+		<div id="footer"> 
+		
+		</div>	
+	
+	</div>
+</body>
+</html>

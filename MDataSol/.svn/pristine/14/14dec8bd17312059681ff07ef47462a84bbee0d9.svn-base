@@ -1,0 +1,78 @@
+package com.mdata.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.mdata.model.User;
+
+@Repository
+public class UserDAOImpl implements UserDAO{
+
+	@Autowired
+	private EntityManagerFactory entityManagerFactory;
+	
+	public EntityManagerFactory getEntityManagerFactory() {
+		return entityManagerFactory;
+	}
+	@PersistenceUnit
+	public void setEntityManagerFactory(EntityManagerFactory entityManagerFactory) {
+		this.entityManagerFactory = entityManagerFactory;
+	}
+
+	private EntityManager entityManager;
+//	
+//	public EntityManager getEntityManager() {
+//		return entityManager;
+//	}
+//	@PersistenceContext
+//	public void setEntityManager(EntityManager entityManager) {
+//		this.entityManager = entityManager;
+//	}
+
+	public void addUser(User user) {
+		
+		entityManager.persist(user);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<User> getAllUsers() {
+		entityManager = this.getEntityManagerFactory().createEntityManager();
+		return entityManager.createQuery("from INDUSER").getResultList();
+		 		 
+	}
+
+	public void deleteUser(String userId) {
+		entityManager = this.getEntityManagerFactory().createEntityManager();
+		User user = (User)entityManager.find(User.class, userId);
+		if(user != null){
+			entityManager.remove(user);
+		}
+	}
+
+	public User updateUser(User user) {
+		entityManager = this.getEntityManagerFactory().createEntityManager();
+		Session session = entityManager.unwrap(Session.class);
+		session.update(user);
+		 return user;
+		
+	}
+
+	public User getUser(String userId) {
+		entityManager = this.getEntityManagerFactory().createEntityManager();
+		Session session = entityManager.unwrap(Session.class);
+		return (User)session.load(User.class, userId);
+		
+		 
+	}
+
+	
+}

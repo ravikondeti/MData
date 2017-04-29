@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24596" started-at="2016-10-21T10:44:33Z" finished-at="2016-10-21T10:44:58Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24596" started-at="2016-10-21T10:44:33Z" finished-at="2016-10-21T10:44:58Z">
+      <class name="CucumberTest.Cucumber.SampleLoginTest">
+        <test-method status="PASS" signature="loadBrowserTest()[pri:0, instance:CucumberTest.Cucumber.SampleLoginTest@271053e1]" name="loadBrowserTest" is-config="true" duration-ms="4296" started-at="2016-10-21T18:44:33Z" finished-at="2016-10-21T18:44:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadBrowserTest -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:CucumberTest.Cucumber.SampleLoginTest@271053e1]" name="loginTest" duration-ms="18735" started-at="2016-10-21T18:44:38Z" finished-at="2016-10-21T18:44:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="closeBrowserTest()[pri:0, instance:CucumberTest.Cucumber.SampleLoginTest@271053e1]" name="closeBrowserTest" is-config="true" duration-ms="1539" started-at="2016-10-21T18:44:56Z" finished-at="2016-10-21T18:44:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserTest -->
+      </class> <!-- CucumberTest.Cucumber.SampleLoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

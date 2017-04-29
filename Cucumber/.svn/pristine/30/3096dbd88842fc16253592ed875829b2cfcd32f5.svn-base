@@ -1,0 +1,74 @@
+[
+  {
+    "source": "^user is on home page$",
+    "steps": [
+      {
+        "name": "user is on home page",
+        "aggregatedDurations": {
+          "average": 5.432149718,
+          "median": 5.432149718
+        },
+        "durations": [
+          {
+            "duration": 5.432149718,
+            "location": "Login_Test.feature:3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^message displayed login successfully$",
+    "steps": [
+      {
+        "name": "message displayed login successfully",
+        "aggregatedDurations": {
+          "average": 7.376761854,
+          "median": 7.376761854
+        },
+        "durations": [
+          {
+            "duration": 7.376761854,
+            "location": "Login_Test.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user navigate to log in page$",
+    "steps": [
+      {
+        "name": "user navigate to log in page",
+        "aggregatedDurations": {
+          "average": 7.555100646,
+          "median": 7.555100646
+        },
+        "durations": [
+          {
+            "duration": 7.555100646,
+            "location": "Login_Test.feature:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user enter username and password$",
+    "steps": [
+      {
+        "name": "user enter username and password",
+        "aggregatedDurations": {
+          "average": 0.603685539,
+          "median": 0.603685539
+        },
+        "durations": [
+          {
+            "duration": 0.603685539,
+            "location": "Login_Test.feature:5"
+          }
+        ]
+      }
+    ]
+  }
+]

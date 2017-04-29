@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: CucumberTest.Cucumber.TestRunnerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 23.328 sec <<< FAILURE!
+When user log out from the appliation(Scenario: Successful logout)  Time elapsed: 0.006 sec  <<< ERROR!
+java.lang.NullPointerException
+	at stepdefinition.LoginTest.user_log_out_from_the_appliation(LoginTest.java:63)
+	at ?.When user log out from the appliation(Login_Test.feature:9)
+
+Scenario: Successful logout  Time elapsed: 0.007 sec  <<< ERROR!
+java.lang.NullPointerException
+	at stepdefinition.LoginTest.user_log_out_from_the_appliation(LoginTest.java:63)
+	at ?.When user log out from the appliation(Login_Test.feature:9)
+

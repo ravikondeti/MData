@@ -1,0 +1,230 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: your.email@your.domain.com"
+      },
+      {
+        "line": 2,
+        "value": "#Keywords Summary :"
+      },
+      {
+        "line": 3,
+        "value": "#Feature: List of scenarios."
+      },
+      {
+        "line": 4,
+        "value": "#Scenario: Business rule through list of steps with arguments."
+      },
+      {
+        "line": 5,
+        "value": "#Given: Some precondition step"
+      },
+      {
+        "line": 6,
+        "value": "#When: Some key actions"
+      },
+      {
+        "line": 7,
+        "value": "#Then: To observe outcomes or validation"
+      },
+      {
+        "line": 8,
+        "value": "#And,But: To enumerate more Given,When,Then steps"
+      },
+      {
+        "line": 9,
+        "value": "#Scenario Outline: List of steps for data-driven as an Examples and \u003cplaceholder\u003e"
+      },
+      {
+        "line": 10,
+        "value": "#Examples: Container for s table"
+      },
+      {
+        "line": 11,
+        "value": "#Background: List of steps run before each of the scenarios"
+      },
+      {
+        "line": 12,
+        "value": "#\"\"\" (Doc Strings)"
+      },
+      {
+        "line": 13,
+        "value": "#| (Data Tables)"
+      },
+      {
+        "line": 14,
+        "value": "#@ (Tags/Labels):To group Scenarios"
+      },
+      {
+        "line": 15,
+        "value": "#\u003c\u003e (placeholder)"
+      },
+      {
+        "line": 16,
+        "value": "#\"\""
+      },
+      {
+        "line": 17,
+        "value": "## (Comments)"
+      },
+      {
+        "line": 19,
+        "value": "#Sample Feature Definition Template"
+      },
+      {
+        "line": 20,
+        "value": "#@tag"
+      }
+    ],
+    "line": 21,
+    "elements": [
+      {
+        "comments": [
+          {
+            "line": 24,
+            "value": "#@tag1"
+          }
+        ],
+        "line": 25,
+        "name": "Home page options verification",
+        "description": "",
+        "id": "home-page-varification;home-page-options-verification",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11644144932,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Launch the website store.demoqa.com",
+            "match": {
+              "location": "LoginTest.launch_the_website_store_demoqa_com()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17513642,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Brower should land on home page",
+            "match": {
+              "location": "LoginTest.brower_should_land_on_home_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88629392,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "Toolsqa logo should display at homepage",
+            "match": {
+              "location": "LoginTest.toolsqa_logo_should_display_at_homepage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 62787939,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Checkout button should be available at homepage",
+            "match": {
+              "location": "LoginTest.checkout_button_should_be_available_at_homepage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 65577564,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "my account option should display at homepage",
+            "match": {
+              "location": "LoginTest.myaccount_option_should_display_at_homepage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72987477,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "menu bar should display at homepage",
+            "match": {
+              "location": "LoginTest.menu_bar_should_display_at_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 33,
+            "value": "#@tag2"
+          }
+        ],
+        "line": 34,
+        "name": "Menu bar verification",
+        "description": "",
+        "id": "home-page-varification;menu-bar-verification",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10966563855,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Launch the website store.demoqa.com",
+            "match": {
+              "location": "LoginTest.launch_the_website_store_demoqa_com()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 553835862,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "Menu bar options should display",
+            "match": {
+              "location": "LoginTest.menu_bar_options_should_display()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60498754,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Search bar should display",
+            "match": {
+              "location": "LoginTest.search_bar_should_display()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Home page varification",
+    "description": "",
+    "id": "home-page-varification",
+    "keyword": "Feature",
+    "uri": "LoginTest.feature"
+  }
+]

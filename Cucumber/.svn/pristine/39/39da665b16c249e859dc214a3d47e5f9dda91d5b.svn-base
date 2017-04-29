@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="26.577677">
+<testcase classname="Login Action" name="Successful login with valid credentials" time="26.572376">
+<system-out><![CDATA[Given user is on home page..................................................passed
+When user navigate to log in page...........................................passed
+And user enter username and password........................................passed
+Then message displayed login successfully...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Action" name="Successful logout" time="0.005301">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.LoginTest.user_log_out_from_the_appliation(LoginTest.java:63)&#13;&#10;&#9;at ✽.When user log out from the appliation(Login_Test.feature:9)&#13;&#10;"><![CDATA[When user log out from the appliation.......................................failed
+Then message displayed logout successfully..................................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at stepdefinition.LoginTest.user_log_out_from_the_appliation(LoginTest.java:63)
+	at ✽.When user log out from the appliation(Login_Test.feature:9)
+]]></failure>
+</testcase>
+</testsuite>

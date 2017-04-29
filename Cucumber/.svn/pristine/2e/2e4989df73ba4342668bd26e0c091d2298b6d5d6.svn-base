@@ -1,0 +1,10 @@
+Feature: Login Action
+    Scenario: Successful login with valid credentials
+    Given user is on home page
+    When user navigate to log in page
+    And user enter username and password
+    Then message displayed login successfully
+    
+    Scenario: Successful logout
+    When user log out from the appliation
+    Then message displayed logout successfully

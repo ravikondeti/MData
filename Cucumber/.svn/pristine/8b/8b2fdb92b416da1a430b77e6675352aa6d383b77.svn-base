@@ -1,0 +1,104 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Successful login with valid credentials",
+        "description": "",
+        "id": "login-action;successful-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5432149718,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "user is on home page",
+            "match": {
+              "location": "LoginTest.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7555100646,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigate to log in page",
+            "match": {
+              "location": "LoginTest.user_navigate_to_log_in_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 603685539,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user enter username and password",
+            "match": {
+              "location": "LoginTest.user_enter_username_and_password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7376761854,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "message displayed login successfully",
+            "match": {
+              "location": "LoginTest.message_displayed_login_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Successful logout",
+        "description": "",
+        "id": "login-action;successful-logout",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5554441,
+              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.LoginTest.user_log_out_from_the_appliation(LoginTest.java:63)\r\n\tat ✽.When user log out from the appliation(Login_Test.feature:9)\r\n",
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "user log out from the appliation",
+            "match": {
+              "location": "LoginTest.user_log_out_from_the_appliation()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "message displayed logout successfully",
+            "match": {
+              "location": "LoginTest.message_displayed_logout_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Action",
+    "description": "",
+    "id": "login-action",
+    "keyword": "Feature",
+    "uri": "Login_Test.feature"
+  }
+]

@@ -1,0 +1,85 @@
+#container {
+	
+	width:1350px;
+	height:640px;
+background: #f2f6f8;
+background: -moz-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #f2f6f8), color-stop(66%, #d8e1e7), color-stop(99%, #b5c6d0), color-stop(100%, #e0eff9));
+background: -webkit-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: -o-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: -ms-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: linear-gradient(to bottom, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
+}
+#content{
+	
+	width:400px;
+	height:400px;
+	margin: 50px 475px 50px 475px;
+		
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9fd8ef+0,9fd8ef+12,9fd8ef+12,9fd8ef+19,9fd8ef+19,9fd8ef+53,2ab0ed+100 */
+background: #f2f6f8;
+background: -moz-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #f2f6f8), color-stop(66%, #d8e1e7), color-stop(99%, #b5c6d0), color-stop(100%, #e0eff9));
+background: -webkit-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: -o-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: -ms-linear-gradient(top, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+background: linear-gradient(to bottom, #f2f6f8 0%, #d8e1e7 66%, #b5c6d0 99%, #e0eff9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
+}
+#header{
+	
+text-align:center;
+	width: auto;
+	height: 50px;
+	padding: 1px 5px 5px 5px;
+	border: thin;
+	border-color:aqua;
+		 
+}
+#reg_header{
+	padding-top:20px;
+	text-align:center;
+	color:#1ba4a6;
+}
+	
+
+#divreg{
+	width:300px;
+	height:200px;
+	margin:30px 0px 0px 0px
+	
+}
+
+#reg_ele1{
+	padding:5px;
+	width:400px;
+	height:150px;
+	margin-top:50px 30px 20px 30px;
+	text-align:center;
+
+}
+a{
+	margin:50px 80px 0px 80px;
+	padding:10px;
+	width:200px;
+	height:30px;
+	color:white;
+	font-weight:bold;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9e4f7+0,0fb4e7+100;Ble+3D+%235 */
+background: rgb(169,228,247); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(169,228,247,1) 0%, rgba(15,180,231,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(169,228,247,1) 0%,rgba(15,180,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(169,228,247,1) 0%,rgba(15,180,231,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+#reg_css1{
+	float:left;
+}
+#reg_css2{
+	float:left;
+	clear:left;
+}
