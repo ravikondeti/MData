@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="33150" started-at="2016-11-07T13:40:53Z" finished-at="2016-11-07T13:41:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="33150" started-at="2016-11-07T13:40:53Z" finished-at="2016-11-07T13:41:26Z">
+      <class name="AppiumTest.Appium.AppiumSampleTest">
+        <test-method status="PASS" signature="initialSetup()[pri:0, instance:AppiumTest.Appium.AppiumSampleTest@1ed4004b]" name="initialSetup" is-config="true" duration-ms="1752" started-at="2016-11-07T21:40:53Z" finished-at="2016-11-07T21:40:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialSetup -->
+        <test-method status="PASS" signature="startApp()[pri:0, instance:AppiumTest.Appium.AppiumSampleTest@1ed4004b]" name="startApp" is-config="true" duration-ms="24945" started-at="2016-11-07T21:40:54Z" finished-at="2016-11-07T21:41:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApp -->
+        <test-method status="FAIL" signature="swipeTest()[pri:0, instance:AppiumTest.Appium.AppiumSampleTest@1ed4004b]" name="swipeTest" duration-ms="3025" started-at="2016-11-07T21:41:19Z" finished-at="2016-11-07T21:41:22Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:152)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:636)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at io.appium.java_client.AppiumDriver.performMultiTouchAction(AppiumDriver.java:348)
+	at io.appium.java_client.MultiTouchAction.perform(MultiTouchAction.java:68)
+	at io.appium.java_client.AppiumDriver.pinch(AppiumDriver.java:420)
+	at AppiumTest.Appium.AppiumSampleTest.swipeTest(AppiumSampleTest.java:499)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swipeTest -->
+        <test-method status="PASS" signature="closeApplicationAfterTest(org.testng.ITestResult)[pri:0, instance:AppiumTest.Appium.AppiumSampleTest@1ed4004b]" name="closeApplicationAfterTest" is-config="true" duration-ms="3384" started-at="2016-11-07T21:41:22Z" finished-at="2016-11-07T21:41:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=swipeTest status=FAILURE method=AppiumSampleTest.swipeTest()[pri:0, instance:AppiumTest.Appium.AppiumSampleTest@1ed4004b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplicationAfterTest -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:AppiumTest.Appium.AppiumSampleTest@1ed4004b]" name="closeApp" is-config="true" duration-ms="15" started-at="2016-11-07T21:41:26Z" finished-at="2016-11-07T21:41:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- AppiumTest.Appium.AppiumSampleTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
