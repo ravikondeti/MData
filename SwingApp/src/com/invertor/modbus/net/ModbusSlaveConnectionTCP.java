@@ -74,4 +74,11 @@ class ModbusSlaveConnectionTCP extends ModbusConnection {
             socket = null;
         }
     }
+
+	@Override
+	public Socket connOpen() throws ModbusIOException {
+		// TODO Auto-generated method stub
+		setOpened(true);
+		return null;
+	}
 }

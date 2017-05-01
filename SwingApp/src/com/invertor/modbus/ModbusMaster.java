@@ -1,5 +1,7 @@
 package com.invertor.modbus;
 
+import java.net.Socket;
+
 import com.invertor.modbus.data.CommStatus;
 import com.invertor.modbus.exception.ModbusIOException;
 import com.invertor.modbus.exception.ModbusNumberException;
@@ -59,6 +61,11 @@ abstract public class ModbusMaster {
 
     public void connect() throws ModbusIOException {
         getConnection().open();
+    }
+    
+    public Socket connectTCP() throws ModbusIOException {
+        getConnection().open();
+		return null;
     }
 
     public void disconnect() throws ModbusIOException {

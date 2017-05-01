@@ -37,6 +37,7 @@ class ModbusMasterConnectionTCP extends ModbusConnection {
 
     final private TcpParameters parameters;
     private ModbusTransport transport = null;
+    public Socket socket;
 
     ModbusMasterConnectionTCP(TcpParameters parameters) {
         this.parameters = parameters;
@@ -61,7 +62,7 @@ class ModbusMasterConnectionTCP extends ModbusConnection {
     public void open() throws ModbusIOException {
         if (!isOpened()) {
             if (parameters != null) {
-                Socket socket = new Socket();
+                socket = new Socket();
                 InetSocketAddress isa = new InetSocketAddress(parameters.getHost(), parameters.getPort());
                 try {
                     socket.connect(isa, Modbus.MAX_CONNECTION_TIMEOUT);
@@ -74,6 +75,25 @@ class ModbusMasterConnectionTCP extends ModbusConnection {
                 setOpened(true);
             }
         }
+    }
+    
+    public Socket connOpen() throws ModbusIOException {
+        if (!isOpened()) {
+            if (parameters != null) {
+                socket = new Socket();
+                InetSocketAddress isa = new InetSocketAddress(parameters.getHost(), parameters.getPort());
+                try {
+                    socket.connect(isa, Modbus.MAX_CONNECTION_TIMEOUT);
+                    socket.setKeepAlive(parameters.isKeepAlive());
+                } catch (Exception e) {
+                    throw new ModbusIOException(e);
+                }
+                transport = ModbusTransportFactory.createTCP(socket);
+                setReadTimeout(getReadTimeout());
+                setOpened(true);
+            }
+        }
+		return socket;
     }
 
     @Override

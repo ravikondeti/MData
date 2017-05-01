@@ -6,6 +6,7 @@ import com.invertor.modbus.net.stream.base.ModbusInputStream;
 import com.invertor.modbus.net.stream.base.ModbusOutputStream;
 import com.invertor.modbus.net.transport.ModbusTransport;
 
+import java.net.Socket;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /*
@@ -41,6 +42,8 @@ abstract public class ModbusConnection {
     abstract public ModbusTransport getTransport();
 
     abstract public void open() throws ModbusIOException;
+    //Added By Ravi
+    abstract public Socket connOpen() throws ModbusIOException;
 
     abstract public void close() throws ModbusIOException;
 
@@ -74,4 +77,6 @@ abstract public class ModbusConnection {
     public void setOpened(boolean opened) {
         this.opened.set(opened);
     }
+    
+    
 }

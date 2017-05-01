@@ -12,22 +12,25 @@ import com.mdata.swing.main.MainWindow;
 
 import java.net.Inet6Address;
 import java.net.InetAddress;
+import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class ModbusMasterTCPConn {
 	/*
 	 * Tcp Connection 
 	 */
+	public Socket socket;
 	public ModbusMaster tcpConnect(TcpParameters tcpParameters) {
 		ModbusMaster m = null;
-		if (MainWindow.modbusMaster != null) {
+		if (MainWindow.modbusMaster == null) {
 			log.info("Modbus TCP connection initialization started with parameters : " +"Host :" +tcpParameters.getHost()
 			+ " Port : " +tcpParameters.getPort());
 			m = ModbusMasterFactory.createModbusMasterTCP(tcpParameters);
 			log.info("");
 			Modbus.setAutoIncrementTransactionId(true);
 			try {
-				m.connect();
+				this.socket =m.connectTCP();
+				
 
 			} catch (ModbusIOException e) {
 				// TODO Auto-generated catch block
@@ -44,6 +47,7 @@ public class ModbusMasterTCPConn {
 	public ModbusMaster tcpDisconnect(ModbusMaster modbusMaster){
 		try {
 			modbusMaster.disconnect();
+			this.socket =null;
 		} catch (ModbusIOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

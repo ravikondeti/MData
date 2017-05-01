@@ -1,5 +1,7 @@
 package com.invertor.modbus.master;
 
+import java.net.Socket;
+
 import com.invertor.modbus.Modbus;
 import com.invertor.modbus.ModbusMaster;
 import com.invertor.modbus.data.CommStatus;
@@ -38,6 +40,7 @@ import com.invertor.modbus.utils.ModbusFunctionCode;
 final public class ModbusMasterTCP extends ModbusMaster {
     final private boolean keepAlive;
     final private ModbusConnection conn;
+
 
     public ModbusMasterTCP(TcpParameters parameters) {
         conn = ModbusConnectionFactory.getTcpMaster(parameters);
@@ -93,6 +96,13 @@ final public class ModbusMasterTCP extends ModbusMaster {
     public void connect() throws ModbusIOException {
         disconnect();
         conn.open();
+        
+    }
+    public Socket connectTCP() throws ModbusIOException{
+    	disconnect();
+    	
+		return conn.connOpen();
+    	
     }
 
     @Override

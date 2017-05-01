@@ -1,5 +1,8 @@
 package com.invertor.modbus.net;
 
+import java.net.Socket;
+
+import com.invertor.modbus.exception.ModbusIOException;
 import com.invertor.modbus.net.transport.ModbusTransportFactory;
 import com.invertor.modbus.serial.SerialPort;
 
@@ -29,4 +32,10 @@ class ModbusConnectionASCII extends ModbusConnectionSerial {
     ModbusConnectionASCII(SerialPort serial) {
         super(serial, ModbusTransportFactory.createASCII(serial));
     }
+
+	@Override
+	public Socket connOpen() throws ModbusIOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

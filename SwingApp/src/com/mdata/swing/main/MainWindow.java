@@ -23,6 +23,9 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.TableViewerColumn;
 
 
 
@@ -45,6 +48,22 @@ public class MainWindow{
 	private TableItem tableItem;
 	private Table table_1;
 	public static String ipAddress;
+	public static int modbusTCPConnectionTimeOut=1000;
+	private Text connectionStatusText;
+	private static boolean isConnStatusThreadStarted=true;
+	public static Thread connStatusThread;
+
+	public static boolean isConnStatusThreadStarted() {
+		return isConnStatusThreadStarted;
+	}
+
+	public static void setConnStatusThreadStarted(boolean isConnStatusThreadStarted) {
+		MainWindow.isConnStatusThreadStarted = isConnStatusThreadStarted;
+	}
+	
+	public static IpaddressTest ipAddressTest = new IpaddressTest();
+	public static TCPConnectionStatusChecker tCPConnectionStatusChecker;
+
 
 	/**
 	 * Launch the application.
@@ -54,8 +73,10 @@ public class MainWindow{
 		
 			try {
 				log.info("testlog");
+				
 				MainWindow window = new MainWindow();
 				window.open();
+
 				log.info("current class:" +window.getClass());
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -107,7 +128,7 @@ public class MainWindow{
 		mntmNewConnection.setText("New Connection");		
 		
 		table = new Table(shell, SWT.BORDER | SWT.FULL_SELECTION);
-		table.setBounds(56, 50, 403, 222);
+		table.setBounds(101, 24, 403, 222);
 		formToolkit.adapt(table);
 		formToolkit.paintBordersFor(table);
 		table.setHeaderVisible(true);
@@ -136,6 +157,10 @@ public class MainWindow{
 		formToolkit.adapt(btnGetData, true, true);
 		btnGetData.setText("Get Data");
 		
+		connectionStatusText = new Text(shell, SWT.BORDER);
+		connectionStatusText.setBounds(10, 10, 76, 21);
+		formToolkit.adapt(connectionStatusText, true, true);
+		
 //		table_1 = formToolkit.createTable(shell, SWT.NONE);
 //		table_1.setBounds(465, 142, 109, 111);
 //		formToolkit.paintBordersFor(table_1);
@@ -156,6 +181,10 @@ public class MainWindow{
 			}
 		});
 		
+		
+		
+
+		
 		btnGetData.addListener(SWT.Selection, new Listener() {
 			 
 			@Override
@@ -175,11 +204,7 @@ public class MainWindow{
 					
 					//data1[offset]=data;
 					offset++;
-	                
 				}
-
-
-	         
 			}catch(Exception ex){
 				log.error(ex.getMessage());
 			}
@@ -189,8 +214,6 @@ public class MainWindow{
 		//Added listener class to open new shell
 		mntmNewConnection.addListener(SWT.Selection, new Listener() {
 			public void handleEvent(Event event) {
-				try {
-					IpaddressTest ipAddressTest = new IpaddressTest();
 					log.info("Modbus Master Object in MainWindow :" +modbusMaster);
 					boolean status=ipAddressTest.ComConnectPanel();
 					if(status=true){
@@ -198,12 +221,6 @@ public class MainWindow{
 					}else{
 						System.out.println("Connection Frame open failed");
 					}
-					
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
 			}
 		});
 		
