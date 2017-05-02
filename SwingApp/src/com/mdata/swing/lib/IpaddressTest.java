@@ -100,6 +100,9 @@ public class IpaddressTest extends JFrame {
 		setBounds(300, 200, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setLocationRelativeTo(null);
+		setAlwaysOnTop(true);
+		setFocusable(true);
 		setContentPane(contentPane);
 		
 		MaskFormatter formatter = null;
@@ -117,14 +120,15 @@ public class IpaddressTest extends JFrame {
 	      ipAddressText.setInputVerifier(new IPTextFieldVerifier());
 	      ipAddressText.setText(MainWindow.ipAddress);
 	      
-	      JButton button = new JButton("Get value");
-	      button.setBounds(331, 228, 79, 23);
-	      button.addActionListener(new ActionListener() {
-	         public void actionPerformed(ActionEvent ae) {
-	        	 MainWindow.modbusMasterTCPConn.readHoldingRegisters(MainWindow.modbusMaster, 1, 0, 10);	
-
-	         }
-	      });
+//	      JButton button = new JButton("Get value");
+//	      button.setBounds(331, 228, 79, 23);
+//	      button.addActionListener(new ActionListener() {
+//	         public void actionPerformed(ActionEvent ae) {
+//	        	 MainWindow.modbusMasterTCPConn.readHoldingRegisters(MainWindow.modbusMaster, 1, 0, 10);	
+//
+//	         }
+//	      });
+//	      getContentPane().add(button);
 	      contentPane.setLayout(null);
 	      contentPane.setLayout(null);
 	      
@@ -132,7 +136,7 @@ public class IpaddressTest extends JFrame {
 	      lblIpAddress.setBounds(89, 52, 65, 14);
 	      contentPane.add(lblIpAddress);
 	      getContentPane().add(ipAddressText);
-	      getContentPane().add(button);
+	      
 	  
 	      ipAddressText.setPreferredSize(new Dimension(150, 20));
 	      
@@ -153,6 +157,10 @@ public class IpaddressTest extends JFrame {
 	      JButton btnDisconnect = new JButton("Disconnect");
 	      btnDisconnect.setBounds(225, 191, 110, 23);
 	      contentPane.add(btnDisconnect);
+	      
+	      JCheckBox connectionStatus = new JCheckBox("");
+	      connectionStatus.setBounds(62, 191, 21, 23);
+	      contentPane.add(connectionStatus);
 
 	      
 //	      JLabel lblTimeOut = new JLabel("Time Out :");
@@ -183,7 +191,12 @@ public class IpaddressTest extends JFrame {
 						portNumberText.getText());
 				log.info("TCP paramerers passed to TCP connection : " + MainWindow.ipAddress + " , "
 						+ portNumberText.getText());
+				try{
 				MainWindow.modbusMaster = MainWindow.modbusMasterTCPConn.tcpConnect(tcpParameters);
+				}catch(Exception e){
+					log.info(e.getMessage());
+					JOptionPane.showMessageDialog(contentPane, "Connection Error", "Connection Error", JOptionPane.ERROR_MESSAGE);
+				}
 				log.info("Modbus Master Object in IpAddressTest :" + MainWindow.modbusMaster);
 
 					
@@ -205,7 +218,11 @@ public class IpaddressTest extends JFrame {
 						log.info(MainWindow.connStatusThread.getName() + " is successfully started. And thread status is : "
 								+ MainWindow.connStatusThread.getState());
 						MainWindow.setConnStatusThreadStarted(false);
+						connectionStatus.setSelected(MainWindow.modbusMasterTCPConn.socket.isConnected());
 					}
+				}else{
+					JOptionPane.showMessageDialog(contentPane, "TCP Connection Already Established", "Connection Message", JOptionPane.INFORMATION_MESSAGE);
+
 				}
 			}
 		});
@@ -215,6 +232,7 @@ public class IpaddressTest extends JFrame {
 				if (!MainWindow.isConnStatusThreadStarted()) {
 				MainWindow.modbusMaster = MainWindow.modbusMasterTCPConn.tcpDisconnect(MainWindow.modbusMaster);
 				log.info("Modbus Master DisConnected From : " + MainWindow.ipAddress);
+				connectionStatus.setSelected(false);
 				
 				if (MainWindow.connStatusThread != null) {
 					MainWindow.tCPConnectionStatusChecker.setRunning(false);
@@ -229,8 +247,11 @@ public class IpaddressTest extends JFrame {
 					log.info(MainWindow.connStatusThread.getName() + " is successfully sopped. And thread status is : " +MainWindow.connStatusThread.getState());
 					MainWindow.setConnStatusThreadStarted(true);
 //					connectBtnStaus=!MainWindow.modbusMasterTCPConn.socket.isConnected();
+
 				}
-			}
+			}else{
+				JOptionPane.showMessageDialog(contentPane, "Already Disconnected", "Connection Message", JOptionPane.INFORMATION_MESSAGE);
+			}	
 			}
 		});
 	}

@@ -46,7 +46,6 @@ public class MainWindow{
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	private Table table;
 	private TableItem tableItem;
-	private Table table_1;
 	public static String ipAddress;
 	public static int modbusTCPConnectionTimeOut=1000;
 	private Text connectionStatusText;

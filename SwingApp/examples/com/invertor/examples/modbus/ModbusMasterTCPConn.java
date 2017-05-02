@@ -15,12 +15,14 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import javax.swing.JOptionPane;
+
 public class ModbusMasterTCPConn {
 	/*
 	 * Tcp Connection 
 	 */
 	public Socket socket;
-	public ModbusMaster tcpConnect(TcpParameters tcpParameters) {
+	public ModbusMaster tcpConnect(TcpParameters tcpParameters) throws ModbusIOException {
 		ModbusMaster m = null;
 		if (MainWindow.modbusMaster == null) {
 			log.info("Modbus TCP connection initialization started with parameters : " +"Host :" +tcpParameters.getHost()
@@ -28,15 +30,7 @@ public class ModbusMasterTCPConn {
 			m = ModbusMasterFactory.createModbusMasterTCP(tcpParameters);
 			log.info("");
 			Modbus.setAutoIncrementTransactionId(true);
-			try {
 				this.socket =m.connectTCP();
-				
-
-			} catch (ModbusIOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
 		}
 		return m;
 	}
