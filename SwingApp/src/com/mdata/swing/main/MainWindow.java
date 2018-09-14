@@ -5,6 +5,7 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
 
+import java.io.File;
 import java.text.ParseException;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ShellAdapter;
@@ -43,7 +44,7 @@ public class MainWindow{
 //	ModbusMasterTCPConn modbusMasterTCPConn;
 	int[] holdingRegisterValues=null;
 	
-	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
+	//private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	private Table table;
 	private TableItem tableItem;
 	public static String ipAddress;
@@ -62,14 +63,16 @@ public class MainWindow{
 	
 	public static IpaddressTest ipAddressTest = new IpaddressTest();
 	public static TCPConnectionStatusChecker tCPConnectionStatusChecker;
-
-
+	
+	static File swtJar;
 	/**
 	 * Launch the application.
 	 * @param args
 	 */
 	public static void main(String[] args) {	
-		
+		//osSWTClassLoader = new OsSWTClassLoader();
+		swtJar = new File(OsSWTClassLoader.getArchFilename("jarlib/swt")); 
+		OsSWTClassLoader.addJarToClasspath(swtJar);
 			try {
 				log.info("testlog");
 				
@@ -128,8 +131,8 @@ public class MainWindow{
 		
 		table = new Table(shell, SWT.BORDER | SWT.FULL_SELECTION);
 		table.setBounds(101, 24, 403, 222);
-		formToolkit.adapt(table);
-		formToolkit.paintBordersFor(table);
+		//formToolkit.adapt(table);
+		//formToolkit.paintBordersFor(table);
 		table.setHeaderVisible(true);
 		table.setLinesVisible(true);
 
@@ -153,12 +156,12 @@ public class MainWindow{
 		
 		btnGetData = new Button(shell, SWT.NONE);
 		btnGetData.setBounds(384, 278, 75, 25);
-		formToolkit.adapt(btnGetData, true, true);
+		//formToolkit.adapt(btnGetData, true, true);
 		btnGetData.setText("Get Data");
 		
 		connectionStatusText = new Text(shell, SWT.BORDER);
 		connectionStatusText.setBounds(10, 10, 76, 21);
-		formToolkit.adapt(connectionStatusText, true, true);
+		//formToolkit.adapt(connectionStatusText, true, true);
 		
 //		table_1 = formToolkit.createTable(shell, SWT.NONE);
 //		table_1.setBounds(465, 142, 109, 111);

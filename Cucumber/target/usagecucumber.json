@@ -5,31 +5,13 @@
       {
         "name": "user is on home page",
         "aggregatedDurations": {
-          "average": 4.859813024,
-          "median": 4.859813024
+          "average": 40.07105605,
+          "median": 40.07105605
         },
         "durations": [
           {
-            "duration": 4.859813024,
+            "duration": 40.07105605,
             "location": "Login_Test.feature:3"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^user navigate to log in page$",
-    "steps": [
-      {
-        "name": "user navigate to log in page",
-        "aggregatedDurations": {
-          "average": 2.137071852,
-          "median": 2.137071852
-        },
-        "durations": [
-          {
-            "duration": 2.137071852,
-            "location": "Login_Test.feature:4"
           }
         ]
       }
